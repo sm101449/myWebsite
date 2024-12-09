@@ -1,191 +1,94 @@
 <html>
 <head>
   <style>
-  
-  .bn632-hover {
-  width: 160px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  margin: 20px;
-  height: 55px;
-  text-align:center;
-  border: none;
-  background-size: 300% 100%;
-  border-radius: 50px;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-}
-
-.bn632-hover:hover {
-  background-position: 100% 0;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-}
-
-.bn632-hover:focus {
-  outline: none;
-}
-
-.bn632-hover.bn25 {
-  background-image: linear-gradient(
-    to right,
-    #29323c,
-    #485563,
-    #2b5876,
-    #4e4376
-  );
-  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
-}
-  
-  
-     body{
-         text-align: center;
-         background-image: linear-gradient(rgb( 52, 89, 104 ), rgb(194, 211, 229 
- ));
-         min-width: 100%;
-         min-height: 100%;
-      }
-      
-      .bn30 {
-  border: 5em;
-  cursor: pointer;
-  outline: none;
-  font-size: 16px;
-  -webkit-transform: translate(0);
-  transform: translate(0);
-  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
-  padding: 0.7em 2em;
-  border-radius: 65px;
-  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
-  -webkit-transition: box-shadow 0.25s;
-  transition: box-shadow 0.25s;
-  color: white;
-}
-
-.bn30 .text {
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
-}
-
-.bn30:after {
-  content: "";
-  border-radius: 18px;
-  position: absolute;
-  margin: 4px;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  background: #0e0e10;
-}
-
-.bn30:hover {
-  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
-  box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
-}
-
-.bn30:hover .text {
-  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
-}
-      
-      h1{
-         background-image: linear-gradient(rgb( 110, 159, 179 ), rgb(168, 194, 223  ));
-         color: WHITE;
-      }
-      
-  </style>
- 
-</head>
-
-<body>
-<h1>All about The last of Us </h1>
-
-
-<head>
-  <style>
-    /* Existing styles... */
-    
-    .responsive-image {
-      max-width: 100%; /* Ensures image is responsive */
-      height: auto; /* Maintains aspect ratio */
+    /* Styling for the sticky header */
+    h1 {
+      background-image: linear-gradient(rgb(110, 159, 179), rgb(168, 194, 223));
+      color: WHITE;
+      position: sticky;
+      top: 0; /* Keeps the header at the top */
+      z-index: 10; /* Makes sure it's on top of other content */
+      padding: 10px;
+      margin: 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow for separation */
     }
+    
+    body {
+      text-align: center;
+      background-image: linear-gradient(rgb(52, 89, 104), rgb(194, 211, 229));
+      min-width: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding-top: 60px; /* Prevents content from being hidden under the sticky header */
+    }
+    
+    .bn632-hover {
+      width: 160px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      margin: 20px;
+      height: 55px;
+      text-align: center;
+      border: none;
+      background-size: 300% 100%;
+      border-radius: 50px;
+      transition: all .4s ease-in-out;
+    }
+
+    .bn632-hover:hover {
+      background-position: 100% 0;
+    }
+
+    .bn632-hover:focus {
+      outline: none;
+    }
+
+    .bn632-hover.bn25 {
+      background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+      box-shadow: 0 4px 15px rgba(45, 54, 65, 0.75);
+    }
+
+    /* Existing styles for other elements... */
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+    }
+
   </style>
 </head>
+
 <body>
- 
+  <!-- Sticky Header -->
+  <h1>All about The Last of Us</h1>
+
   <img class="responsive-image" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/10/tlou-part-1-and-part-2-remastered.jpg" alt="The Last of Us Remastered">
-</body>
 
+  <h1>
+    "The Last of Us" is a critically acclaimed action-adventure video game set in a post-apocalyptic world...
+  </h1>
 
+  <!-- Embed gif -->
+  <iframe src="https://giphy.com/embed/EUaSwBJDSfN1lghIiq" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
-<h1>
- "The Last of Us" is a critically acclaimed action-adventure video game set in a post-apocalyptic world. The story follows Joel, a hardened survivor, and Ellie, a teenage girl who is immune to a fungal infection that has devastated humanity.
+  <h1>WHO IS ELLIE?</h1>
+  <p>Ellie, also known as Ellie Williams...</p>
+  <img src="https://image.api.playstation.com/cdn/UP9000/CUSA07820_00/NAoBeXb9Oidhc63TZlaLjatQ53XiJ0q0.png?w=440&thumb=false">
 
-The game begins two decades after the outbreak, where society has collapsed, and various factions struggle for power and resources. Joel is tasked with escorting Ellie across a dangerous landscape filled with infected creatures and hostile humans to a group called the Fireflies, who hope to use her immunity to create a cure.
+  <h1>WHO IS JOEL?</h1>
+  <p>Joel is one of the central characters in "The Last of Us"...</p>
+  <img src="https://i.pinimg.com/originals/bf/75/cf/bf75cf6c8bc8ed7ad7855ea4b9c77eea.jpg">
 
-Players experience a mix of stealth, combat, and exploration, with an emphasis on resource management. The narrative delves into themes of survival, love, loss, and the moral complexities of human nature, with the relationship between Joel and Ellie at its core.
+  <h1>Here is some music from the game!</h1>
+  <ins>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pfA5UqEU_80?si=yQIEfzteMQqCugXh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </ins>
 
-There are two main games in the series:
-
-The Last of Us (2013) - This original game introduces players to Joel and Ellie's journey across a ravaged America, establishing the emotional depth and tension that define their relationship.
-The Last of Us Part II (2020) - This sequel continues the story, focusing on themes of revenge, grief, and the consequences of choices. It expands on the characters and their motivations, presenting a more complex narrative that challenges players' perceptions of right and wrong.
-In addition to the games, "The Last of Us" has been adapted into a television series by HBO. The show closely follows the game's storyline while expanding on the characters and world, capturing the emotional depth of the story for a broader audience. The series has received positive reviews for its performances, particularly those of Pedro Pascal as Joel and Bella Ramsey as Ellie.
-</h1>
-
-
-
-
-<iframe src="https://giphy.com/embed/EUaSwBJDSfN1lghIiq" width="480" height="271" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/naughty-dog-the-last-of-us-1-part-i-EUaSwBJDSfN1lghIiq"></a></p>
-
-<h1>
-WHO IS ELLIE?
-</h1>
-
-<p>
-  
-Ellie also known as ellie willams is one of the main characters in the video game series "The Last of Us" developed by Naughty Dog. Set in a post-apocalyptic world ravaged by a fungal infection that turns people into deadly creatures, Ellie is a teenage girl who has grown up in this harsh environment.
-</p>
-<img src=https://image.api.playstation.com/cdn/UP9000/CUSA07820_00/NAoBeXb9Oidhc63TZlaLjatQ53XiJ0q0.png?w=440&thumb=false>
-
-
-
-
-<h1>
-  WHO IS JOEL?
-</h1>
-
-<P>
-Joel is also one of the main characters/central charecters  in the video game series "The Last of Us" (TLOU), created by Naughty Dog. Set in a post-apocalyptic world ravaged by a fungal infection that turns people into aggressive creatures, Joel is a hardened survivor in his late 40s.
-
-At the beginning of the story, he experiences a tragic loss that shapes his personality and worldview. Over the course of the game, Joel is tasked with escorting a young girl named Ellie across the United States. Ellie is immune to the infection, and there is hope that she could be the key to developing a cure.
-
-Joel's character is complex; he is both a protector and a morally ambiguous figure. His journey involves themes of love, loss, and the difficult choices people make in desperate situations. The relationship that develops between Joel and Ellie is central to the narrative, showcasing themes of fatherhood and sacrific
-</P>
-
-<img src= https://i.pinimg.com/originals/bf/75/cf/bf75cf6c8bc8ed7ad7855ea4b9c77eea.jpg >
-
-<h1>
-here is some music from the game!
-</h1>
-
-<ins><iframe width="560" height="315" src="https://www.youtube.com/embed/pfA5UqEU_80?si=yQIEfzteMQqCugXh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></ins>
-
-
-
-<a href="https://www.playstation.com/en-us/the-last-of-us/">
-    <button class="bn632-hover bn25"> click her to see the offical website</button>
-</a>
-
+  <a href="https://www.playstation.com/en-us/the-last-of-us/">
+    <button class="bn632-hover bn25">Click here to see the official website</button>
+  </a>
 
 </body>
-
 </html>
+
