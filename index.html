@@ -12,7 +12,7 @@
       margin: 0;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow for separation */
     }
-    
+
     body {
       text-align: center;
       background-image: linear-gradient(rgb(52, 89, 104), rgb(194, 211, 229));
@@ -21,7 +21,43 @@
       margin: 0;
       padding-top: 60px; /* Prevents content from being hidden under the sticky header */
     }
-    
+
+    /* Styling for the navigation bar */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #b3d9e6; /* Set light blue background color */
+      padding: 10px;
+      z-index: 20;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow for separation */
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 20px;
+    }
+
+    /* Set the default color of the menu links */
+    nav ul li a {
+      color: #336c88; /* Set text color to #336c88 */
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    /* Change the color to white on hover */
+    nav ul li a:hover {
+      color: white; /* Change text color to white when hovering */
+    }
+
+    /* Existing styles for other elements... */
     .bn632-hover {
       width: 160px;
       font-size: 16px;
@@ -50,37 +86,50 @@
       box-shadow: 0 4px 15px rgba(45, 54, 65, 0.75);
     }
 
-    /* Existing styles for other elements... */
     .responsive-image {
       max-width: 100%;
       height: auto;
     }
 
+    .hidden {
+      display: none; /* To hide elements when needed */
+    }
   </style>
 </head>
 
 <body>
   <!-- Sticky Header -->
-  <h1>All about The Last of Us</h1>
+  <h1 id="main-heading">All about The Last of Us</h1>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#about-heading">About</a></li>
+      <li><a href="#ellie-heading">Ellie</a></li>
+      <li><a href="#joel-heading">Joel</a></li>
+      <li><a href="#music-heading">Music</a></li>
+      <li><a href="https://www.playstation.com/en-us/the-last-of-us/" target="_blank">Official Website</a></li>
+    </ul>
+  </nav>
 
   <img class="responsive-image" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/10/tlou-part-1-and-part-2-remastered.jpg" alt="The Last of Us Remastered">
 
-  <h1>
+  <h1 id="about-heading" class="hidden">
     "The Last of Us" is a critically acclaimed action-adventure video game set in a post-apocalyptic world...
   </h1>
 
   <!-- Embed gif -->
   <iframe src="https://giphy.com/embed/EUaSwBJDSfN1lghIiq" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
-  <h1>WHO IS ELLIE?</h1>
-  <p>Ellie, also known as Ellie Williams...</p>
+  <h1 id="ellie-heading" class="hidden">WHO IS ELLIE?</h1>
+  <p>Ellie, also known as Ellie Williams... Ellie is a key character in "The Last of Us" (TLOU) series, both in the video game and the television adaptation...</p>
   <img src="https://image.api.playstation.com/cdn/UP9000/CUSA07820_00/NAoBeXb9Oidhc63TZlaLjatQ53XiJ0q0.png?w=440&thumb=false">
 
-  <h1>WHO IS JOEL?</h1>
-  <p>Joel is one of the central characters in "The Last of Us"...</p>
+  <h1 id="joel-heading" class="hidden">WHO IS JOEL?</h1>
+  <p>Joel is a central character in "The Last of Us" (TLOU), a popular video game series and its TV adaptation...</p>
   <img src="https://i.pinimg.com/originals/bf/75/cf/bf75cf6c8bc8ed7ad7855ea4b9c77eea.jpg">
 
-  <h1>Here is some music from the game!</h1>
+  <h1 id="music-heading" class="hidden">Here is some music from the game!</h1>
   <ins>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/pfA5UqEU_80?si=yQIEfzteMQqCugXh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </ins>
@@ -89,6 +138,29 @@
     <button class="bn632-hover bn25">Click here to see the official website</button>
   </a>
 
-</body>
-</html>
+  <script>
+    window.onscroll = function() {toggleHeadings()};
 
+    function toggleHeadings() {
+      var mainHeading = document.getElementById("main-heading");
+      var aboutHeading = document.getElementById("about-heading");
+      var ellieHeading = document.getElementById("ellie-heading");
+      var joelHeading = document.getElementById("joel-heading");
+      var musicHeading = document.getElementById("music-heading");
+
+      if (window.scrollY > 50) {
+        aboutHeading.classList.add("hidden");
+        ellieHeading.classList.add("hidden");
+        joelHeading.classList.add("hidden");
+        musicHeading.classList.add("hidden");
+      } else {
+        aboutHeading.classList.remove("hidden");
+        ellieHeading.classList.remove("hidden");
+        joelHeading.classList.remove("hidden");
+        musicHeading.classList.remove("hidden");
+      }
+    }
+  </script>
+
+</body>
+</html
