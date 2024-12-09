@@ -1,5 +1,9 @@
+
 <html>
 <head>
+  <!-- Include Google Font for Permanent Marker -->
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
   <style>
     /* Styling for the sticky header */
     h1 {
@@ -44,8 +48,9 @@
       margin: 0 20px;
     }
 
-    /* Set the default color of the menu links */
+    /* Set the font and color of the menu links */
     nav ul li a {
+      font-family: 'Permanent Marker', cursive; /* Apply Permanent Marker font */
       color: #336c88; /* Set text color to #336c88 */
       text-decoration: none;
       font-size: 18px;
@@ -57,7 +62,7 @@
       color: white; /* Change text color to white when hovering */
     }
 
-    /* Existing styles for other elements... */
+    /* Custom Button Styles */
     .bn632-hover {
       width: 160px;
       font-size: 16px;
@@ -86,14 +91,16 @@
       box-shadow: 0 4px 15px rgba(45, 54, 65, 0.75);
     }
 
+    /* Sections */
+    .hidden {
+      display: none; /* Hide sections by default */
+    }
+
     .responsive-image {
       max-width: 100%;
       height: auto;
     }
 
-    .hidden {
-      display: none; /* To hide elements when needed */
-    }
   </style>
 </head>
 
@@ -104,63 +111,65 @@
   <!-- Navigation Bar -->
   <nav>
     <ul>
-      <li><a href="#about-heading">About</a></li>
-      <li><a href="#ellie-heading">Ellie</a></li>
-      <li><a href="#joel-heading">Joel</a></li>
-      <li><a href="#music-heading">Music</a></li>
+      <li><a href="#about-heading" onclick="showSection('about-heading')">About</a></li>
+      <li><a href="#ellie-heading" onclick="showSection('ellie-heading')">Ellie</a></li>
+      <li><a href="#joel-heading" onclick="showSection('joel-heading')">Joel</a></li>
+      <li><a href="#music-heading" onclick="showSection('music-heading')">Music</a></li>
       <li><a href="https://www.playstation.com/en-us/the-last-of-us/" target="_blank">Official Website</a></li>
     </ul>
   </nav>
 
+  <!-- The Last of Us Game Icon -->
   <img class="responsive-image" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/10/tlou-part-1-and-part-2-remastered.jpg" alt="The Last of Us Remastered">
 
-  <h1 id="about-heading" class="hidden">
-    "The Last of Us" is a critically acclaimed action-adventure video game set in a post-apocalyptic world...
-  </h1>
+  <!-- Sections that will appear when clicking the menu -->
+  <div id="about-heading" class="hidden">
+    <h1>"The Last of Us" is a critically acclaimed action-adventure video game set in a post-apocalyptic world...</h1>
+  </div>
 
-  <!-- Embed gif -->
-  <iframe src="https://giphy.com/embed/EUaSwBJDSfN1lghIiq" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  <div id="ellie-heading" class="hidden">
+    <h1>WHO IS ELLIE?</h1>
+    <p>Ellie, also known as Ellie Williams, is the main protagonist of "The Last of Us" (TLOU) series. A survivor of a fungal infection that nearly wiped out humanity, Ellie is known for her strength, resilience, and emotional depth. She is also an exceptional marksman, capable of handling firearms and stealth techniques to survive in the dangerous world of TLOU.</p>
+    <p>She is an important character in both the video game and its television adaptation. She forms a close bond with Joel, another main character in the series, as they journey across a post-apocalyptic America.</p>
+    <img src="https://image.api.playstation.com/cdn/UP9000/CUSA07820_00/NAoBeXb9Oidhc63TZlaLjatQ53XiJ0q0.png?w=440&thumb=false" alt="Ellie Image">
+  </div>
 
-  <h1 id="ellie-heading" class="hidden">WHO IS ELLIE?</h1>
-  <p>Ellie, also known as Ellie Williams... Ellie is a key character in "The Last of Us" (TLOU) series, both in the video game and the television adaptation...</p>
-  <img src="https://image.api.playstation.com/cdn/UP9000/CUSA07820_00/NAoBeXb9Oidhc63TZlaLjatQ53XiJ0q0.png?w=440&thumb=false">
+  <div id="joel-heading" class="hidden">
+    <h1>WHO IS JOEL?</h1>
+    <p>Joel is a central character in "The Last of Us" (TLOU), a popular video game series and its TV adaptation. He is a hardened survivor who lost his daughter at the start of the outbreak and is emotionally scarred as a result. Joel plays a key role in guiding Ellie across the post-apocalyptic United States, with both characters developing a deep bond during their journey.</p>
+    <img src="https://i.pinimg.com/originals/bf/75/cf/bf75cf6c8bc8ed7ad7855ea4b9c77eea.jpg" alt="Joel Image">
+  </div>
 
-  <h1 id="joel-heading" class="hidden">WHO IS JOEL?</h1>
-  <p>Joel is a central character in "The Last of Us" (TLOU), a popular video game series and its TV adaptation...</p>
-  <img src="https://i.pinimg.com/originals/bf/75/cf/bf75cf6c8bc8ed7ad7855ea4b9c77eea.jpg">
+  <div id="music-heading" class="hidden">
+    <h1>Here is some music from the game!</h1>
+    <ins>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/pfA5UqEU_80?si=yQIEfzteMQqCugXh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </ins>
+  </div>
 
-  <h1 id="music-heading" class="hidden">Here is some music from the game!</h1>
-  <ins>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/pfA5UqEU_80?si=yQIEfzteMQqCugXh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </ins>
-
+  <!-- Preserved Custom Button -->
   <a href="https://www.playstation.com/en-us/the-last-of-us/">
     <button class="bn632-hover bn25">Click here to see the official website</button>
   </a>
 
   <script>
-    window.onscroll = function() {toggleHeadings()};
+    // Function to show the relevant section when a menu item is clicked
+    function showSection(sectionId) {
+      // Hide all sections
+      var sections = document.querySelectorAll('div[id^="about-heading"], div[id^="ellie-heading"], div[id^="joel-heading"], div[id^="music-heading"]');
+      sections.forEach(function(section) {
+        section.classList.add('hidden');
+      });
 
-    function toggleHeadings() {
-      var mainHeading = document.getElementById("main-heading");
-      var aboutHeading = document.getElementById("about-heading");
-      var ellieHeading = document.getElementById("ellie-heading");
-      var joelHeading = document.getElementById("joel-heading");
-      var musicHeading = document.getElementById("music-heading");
-
-      if (window.scrollY > 50) {
-        aboutHeading.classList.add("hidden");
-        ellieHeading.classList.add("hidden");
-        joelHeading.classList.add("hidden");
-        musicHeading.classList.add("hidden");
-      } else {
-        aboutHeading.classList.remove("hidden");
-        ellieHeading.classList.remove("hidden");
-        joelHeading.classList.remove("hidden");
-        musicHeading.classList.remove("hidden");
-      }
+      // Show the selected section
+      var sectionToShow = document.getElementById(sectionId);
+      sectionToShow.classList.remove('hidden');
     }
-  </script>
 
+    // Initially hide all sections except the main heading
+    document.addEventListener("DOMContentLoaded", function() {
+      showSection('about-heading'); // Optionally show 'about' as default on page load
+    });
+  </script>
 </body>
-</html
+</html>
